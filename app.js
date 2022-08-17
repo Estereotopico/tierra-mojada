@@ -8,22 +8,22 @@ app.listen(3000, () => {
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){
-    res.render('pages/index');
+    res.render('pages/home');
 })
 
 app.get('/categorias', function(req, res){
     res.render('pages/categorias')
 })
-app.get('/listadoPorCategoría', function(req,res){
-    res.render('pages/listadoPorCategorías')
+app.get('/listadoPorCategorias', function(req,res){
+    res.render('pages/listadoPorCategorias')
 })
 
 app.get('/productos', function(req,res){
     res.render('pages/productos')
 })
 
-app.get('/cómoComprar', function(req,res){
-    res.render('pages/cómoComprar')
+app.get('/comoComprar', function(req,res){
+    res.render('pages/comoComprar')
 })
 
 app.get('/carrito', function(req,res){
