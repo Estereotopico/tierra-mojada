@@ -33,3 +33,4 @@ app.get('/carrito', function(req,res){
 app.get('/finalizarCompra', function(req,res){
     res.render('pages/finalizarCompra')
 })
+// asfasf
