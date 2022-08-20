@@ -1,9 +1,3 @@
 .text-light {
     color: white;
 }
-.button-search {
-    color: #341B07;
-    background-color:#E5AC23;
-    border-color: #341B07;
-    box-shadow: 0 0 0 .2rem rgba(247, 169, 0, 0.973);
-}
