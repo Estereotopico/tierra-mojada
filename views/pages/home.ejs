@@ -9,9 +9,19 @@
   </head>
   <body>
     <%- include('../partials/headers')%>
-    
-    <footer>
-      <%- include('../partials/footers')%>
-    </footer>
+
+    <%- include('../partials/carousel')%>
+
+    <div id="productosDestacados">
+      <div class="container text-center">
+        <div class="row">
+          <% for(let x=0; x<=5; x++){ %>
+            <%- include('../partials/home/prodDestacado')%>
+          <% } %>
+        </div>
+      </div>
+    </div>
+
+    <%- include('../partials/footers')%>
   </body>
 </html>

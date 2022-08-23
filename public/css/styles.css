@@ -1,9 +1,39 @@
 .text-light {
     color: white;
 }
+
+.button-search:focus {
+    border-color: black;
+}
+
+.button-search:hover {
+    color: red;
+    border-color: black;
+}
+
 .button-search {
     color: #341B07;
     background-color:#E5AC23;
     border-color: #341B07;
     box-shadow: 0 0 0 .2rem rgba(247, 169, 0, 0.973);
+}
+
+.carousel-item{
+    height: 500px;
+}
+
+.prod-destacado{
+    height: 200px;
+    width: 200px;
+    border: black solid 1px;
+    margin: 20px;
+}
+
+.prod-imagen{
+    border-bottom: 1px solid black;
+    height: 140px;
+}
+
+.prod-precio{
+    height: 60px;
 }
