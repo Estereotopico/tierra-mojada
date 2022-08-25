@@ -4,10 +4,12 @@
 
 .button-search:focus {
     border-color: black;
+    box-shadow: #341B07;
+    
 }
 
 .button-search:hover {
-    color: red;
+    color: #341B07;
     border-color: black;
 }
 
