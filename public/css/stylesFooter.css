@@ -1,14 +1,10 @@
-.text-black {
-    color: black;
-    text-decoration: none;
+.bg-yellow {
+    background-color: #E5AC23;
+}
+.text-color-brown {
+    color:  #341B07;
 }
 
-.margin{
-    text-align: center;
-}
-.text-right {
-    text-align: right;
-}
-.text-left {
-    text-align: left;
+.border-color {
+        color: #341B07;
 }
