@@ -9,30 +9,44 @@
 
   <body>
     <%- include('../partials/headers')%>
-      
-    <img src="/imgDeBienvenida.svg" class="img-fluid" style="width:100%"/>
-   
-    <!-- Info de Envíos -->
-    <div class="container-fluid text-center bg-lg" >
-      <div class="row gx-5">
-        <div class="col">
-          <div class="p-1 bg-lg"><img src="/bicycle.svg" class="img-fluid"/></div>
-          <p class="fst-italic text-wrap lh-sm fw-semibold">Envíos a domicilio gratis en Guernica. <br> Sin monto mínimo.</p>
+    <div class="container-fluid p-0">
+      <img src="/imgDeBienvenida.svg" class="img-fluid" style="width:100%"/>
+    
+      <!-- Info de Envíos -->
+      <div class="container-fluid text-center bg-lg" >
+        <div class="row gx-5">
+          <div class="col">
+            <div class="p-1 bg-lg"><img src="/bicycle.svg" class="img-fluid"/></div>
+            <p class="fst-italic text-wrap lh-sm fw-semibold">Envíos a domicilio gratis en Guernica. <br> Sin monto mínimo.</p>
+          </div>
+          <div class="col">
+            <div class="p-1 bg-lg" style="margin: 8px;"><img src="/train-front.svg" class="img-fluid"/></div>
+            <p class="fst-italic text-wrap lh-sm fw-semibold">Entregas en estaciones del tren Roca. <br> Sin monto mínimo.</p>
+          </div> 
+          <div class="col">
+            <div class="p-1 bg-lg"><img style="margin: 8px" src="/question.svg" class="img-fluid" /></div>
+            <p class="fst-italic text-wrap lh-sm fw-semibold">Consultá por tu localidad <br> y los costos de envío.</p>
+          </div> 
         </div>
-        <div class="col">
-          <div class="p-1 bg-lg" style="margin: 8px;"><img src="/train-front.svg" class="img-fluid"/></div>
-          <p class="fst-italic text-wrap lh-sm fw-semibold">Entregas en estaciones del tren Roca. <br> Sin monto mínimo.</p>
-        </div> 
-        <div class="col">
-          <div class="p-1 bg-lg"><img style="margin: 8px" src="/question.svg" class="img-fluid" /></div>
-          <p class="fst-italic text-wrap lh-sm fw-semibold">Consultá por tu localidad <br> y los costos de envío.</p>
-        </div> 
       </div>
-    </div>
-  
-    <footer>
-    <%- include('../partials/footers')%>
-  </footer>
+      
+      
+      <!-- Sección categorías -->
+      <div class="container-fluid pt-3 ps-5 pe-5 pb-3">
+        <h2 class="text-center mb-4"> Categorías </h2>
+          <div class="card" style="width: 200px; height: 200px;">
+            <img src="fotosHome/categoriaharinas.png" class="card-img-top" 
+            <div class="card-body">
+              <h5 class="card-title text-center">Harinas</h5>        
+            </div>
+          </div>
+      </div>
+      
+      
+      <footer>
+      <%- include('../partials/footers')%>
+      </footer>
+    </div>    
   </body>
 
   </html>
