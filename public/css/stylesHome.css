@@ -1,3 +1,42 @@
-.bg-lg {
-    background-color: #FFEAB7;
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    max-height: 100%;
+    box-sizing: border-box
 }
+
+
+
+.info {
+    display: inline-flex;
+    justify-content: space-evenly;
+    background-color: #FFEAB7;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.img-category {
+    border-radius: 10px;
+    width: 180px !important;  
+    transition: 0.1s ease;
+}
+
+
+
+.card-category {
+    text-align: center;
+}
+
+
+.img-category:hover {
+    cursor: pointer;
+    box-shadow: 2px 3px 6px #534b3a;
+}
+
+.link:hover {
+    color: #534b3a;
+}
+
+.row {
+    gap: 30px 0px ;
+}
+

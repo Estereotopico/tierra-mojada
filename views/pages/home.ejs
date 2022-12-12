@@ -1,52 +1,94 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Inicio - Tierra Mojada</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <title> <%- title %> </title> 
     <link href="/css/stylesHome.css" rel="stylesheet">
+    <%- include('../partials/importBootstrap')%>
+    
   </head>
 
   <body>
-    <%- include('../partials/headers')%>
-    <div class="container-fluid p-0">
-      <img src="/imgDeBienvenida.svg" class="img-fluid" style="width:100%"/>
+    <header style="max-width: 100%">
+      <%- include('../partials/headers')%>
+    </header>
     
-      <!-- Info de Envíos -->
-      <div class="container-fluid text-center bg-lg" >
-        <div class="row gx-5">
-          <div class="col">
-            <div class="p-1 bg-lg"><img src="/bicycle.svg" class="img-fluid"/></div>
-            <p class="fst-italic text-wrap lh-sm fw-semibold">Envíos a domicilio gratis en Guernica. <br> Sin monto mínimo.</p>
-          </div>
-          <div class="col">
-            <div class="p-1 bg-lg" style="margin: 8px;"><img src="/train-front.svg" class="img-fluid"/></div>
-            <p class="fst-italic text-wrap lh-sm fw-semibold">Entregas en estaciones del tren Roca. <br> Sin monto mínimo.</p>
-          </div> 
-          <div class="col">
-            <div class="p-1 bg-lg"><img style="margin: 8px" src="/question.svg" class="img-fluid" /></div>
-            <p class="fst-italic text-wrap lh-sm fw-semibold">Consultá por tu localidad <br> y los costos de envío.</p>
-          </div> 
+
+    <div>
+      <img src="/imgDeBienvenida.svg" class="img-fluid" style="max-width: 100%"/>
+    </div>
+
+    <!-- Info de Envíos -->
+    <section class="container-fluid text-center info" style="max-width: 100%">
+
+      <article class="col">
+        <img src="/bicycle.svg" class="img-fluid"/>
+        <p class=" lh-sm fw-semibold">Envíos a domicilio gratis en Guernica. <br> Sin monto mínimo.</p>
+      </article>
+
+      <article class="col">
+        <img src="/train-front.svg" class="img-fluid" style="margin: 8px;"/>
+        <p class="lh-sm fw-semibold">Entregas en estaciones del tren Roca. <br> Sin monto mínimo.</p>
+      </article> 
+
+      <article class="col">
+        <img src="/question.svg" class="img-fluid" style="margin: 8px"/>
+        <p class="lh-sm fw-semibold">Consultá por tu localidad <br> y los costos de envío.</p>
+      </article> 
+    </section> 
+  
+      
+    <!-- Sección categorías -->
+    <section style="margin: 0px 30px">
+      <div>
+        <h2 class="text-center mb-5 mt-3 "> Categorías </h2>
+      </div>
+
+      
+      <article class= "row justify-content-start" >
+        <% categories.forEach(function(value) { %>        
+        <div class="col-3 card-category">        
+            <a href="<%-value.link %>" class= "text-decoration-none" target="_blank">            
+            <img src= "<%- value.img %>"  class="img-category">
+            <h5 class=" text-center text-dark "> <%- value.category %></h5>
+            </a>          
         </div>
+        <% }) %>
+      </article>
+      
+      <div style="text-align: right;">
+        <a href="/categorias" class="text-decoration-none link"> Ver más</a>
       </div>
-      
-      
-      <!-- Sección categorías -->
-      <div class="container-fluid pt-3 ps-5 pe-5 pb-3">
-        <h2 class="text-center mb-4"> Categorías </h2>
-          <div class="card" style="width: 200px; height: 200px;">
-            <img src="fotosHome/categoriaharinas.png" class="card-img-top" 
-            <div class="card-body">
-              <h5 class="card-title text-center">Harinas</h5>        
-            </div>
-          </div>
+    </section>
+
+    <!-- Sección categorías -->
+    <section style="margin: 0px 30px">
+      <div>
+        <h2 class="text-center mb-5 mt-3 "> Productos destacados </h2>
       </div>
+
       
+      <article class= "row text-center" >
+        <% categories.forEach(function(value) { %>        
+        <div class="col-3 card-category">        
+            <a href="<%-value.link %>" class= "text-decoration-none" target="_blank">            
+            <img src= "<%- value.img %>"  class="img-category">
+            <h5 class=" text-center text-dark "> <%- value.category %></h5>
+          </a>          
+        </div>
+        <% }) %>
+      </article>
+      
+      <div style="text-align: right;">
+        <a href="/categorias" class="text-decoration-none link"> Ver más</a>
+      </div>
+    </section>
+     
+  
       
       <footer>
       <%- include('../partials/footers')%>
-      </footer>
-    </div>    
+      </footer>   
   </body>
 
   </html>

@@ -1,12 +1,41 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado por Categoría</title>
-</head>
-<body>
-    <%- include('../partials/headers')%>
-</body>
-</html>
+
+    <head>
+        <title> <%- title %> </title>
+        <link href="/css/stylesHome.css" rel="stylesheet">
+        <%- include('../partials/importBootstrap')%>
+    </head>
+
+    <body>
+
+        <header>
+            <%- include('../partials/headers')%>
+        </header>
+
+        <section style="margin: 0px 30px">
+
+            <div>
+            <h2 class="text-center mb-5 mt-3 "> <%- title %> </h2>
+            </div>
+            
+            <article class= "row justify-content-start" >
+                <% lista.forEach(function(value) { %>        
+                <div class="col-3 card-category">        
+                    <a href="<%-value.link %>" class= "text-decoration-none" target="_blank">            
+                    <img src= "<%- value.img %>"  class="img-category">
+                    <h5 class=" text-center text-dark "> <%- value.name %></h5>
+                    </a>          
+                </div>
+                <% }) %>
+            </article>
+            
+        </section>
+
+        <footer>
+            <%- include('../partials/footers')%>
+        </footer>   
+        
+    </body>
+    </html>
